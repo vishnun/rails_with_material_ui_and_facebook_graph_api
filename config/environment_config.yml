@@ -1,0 +1,15 @@
+development: &development
+  FACEBOOK_KEY: 1153165931382425
+  FACEBOOK_SECRET: 36e9603b9dbb3fdbc58385cd1a6a3481
+
+test: &test
+  <<: *development
+
+
+production:
+  <<: *test
+  FACEBOOK_KEY: 1152413834790968
+  FACEBOOK_SECRET: aa0c35c65a3dc7bfd94c9afdb0f06060
+
+assets:
+  <<: *development

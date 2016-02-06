@@ -1,0 +1,19 @@
+<h4>Albums</h4>
+<table>
+  <thead>
+  <tr>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Link</td>
+  </tr>
+  </thead>
+  <% @albums.each do |album| %>
+      <tr>
+        <td><%= album.id %></td>
+        <td><%= album.name %></td>
+        <td><%= link_to album.name, album.link, class: 'album-link' %></td>
+        <td><%= link_to album.name.concat(' - photos'), facebook_album_path(album.id), class: 'album-link' %></td>
+      </tr>
+  <% end %>
+</table>
+

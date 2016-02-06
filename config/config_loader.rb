@@ -1,0 +1,1 @@
+ENV = YAML.load_file("#{Rails.root}/config/environment_config.yml")[Rails.env]

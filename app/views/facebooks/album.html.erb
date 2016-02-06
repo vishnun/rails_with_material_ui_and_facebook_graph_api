@@ -1,0 +1,18 @@
+<h4>Album page</h4>
+
+<table>
+  <thead>
+  <td>photo</td>
+  <td>photo id</td>
+  <td>name</td>
+  </thead>
+  <tbody>
+  <% @photos.each do |photo| %>
+      <tr>
+        <td><img height="200" width="200" src="<%= photo.source %>" alt="<%= photo.name %>"></td>
+        <td><%= link_to photo.id,  photo.source %></td>
+        <td><%= photo.name %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
