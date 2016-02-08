@@ -7,7 +7,6 @@ class FacebooksController < ApplicationController
   end
 
   def album
-    fbUser = current_user.facebook
     @photos = FbGraph2::Album.new(album_params[:id]).photos({access_token: current_user.oauth_token, fields: 'id, name, source'})
   end
 
